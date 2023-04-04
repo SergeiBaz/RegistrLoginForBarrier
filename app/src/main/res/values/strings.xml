@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">RegistrLoginForBarrier</string>
+    <string name="welcome">Welcome</string>
+    <string name="sing_in">Sing in</string>
+    <string name="sing_up">Sing up</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone</string>
+    <string name="house_number">House number</string>
+    <string name="apartment_number">Apartment number</string>
+    <string name="registration">Registration</string>
+    <string name="entry">Entry</string>
+    <string name="exit">Exit</string>
+    <string name="you_entered_incorrect_data">You entered incorrect data</string>
+    <string name="open_the_barrier">Open the barrier</string>
+</resources>

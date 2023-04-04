@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RegistrLoginForBarrier</string>
+    <string name="welcome">Добро пожаловать</string>
+    <string name="sing_in">Войти в аккаунт</string>
+    <string name="sing_up">Зарегистрироваться</string>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="name">Имя</string>
+    <string name="phone">Телефон</string>
+    <string name="house_number">Номер дома</string>
+    <string name="apartment_number">Номер квартиры</string>
+    <string name="registration">Регистрация</string>
+    <string name="entry">Вход</string>
+    <string name="exit">Выход</string>
+    <string name="you_entered_incorrect_data">Вы ввели неверные данные</string>
+    <string name="open_the_barrier">Открыть шлагбаум</string>
+</resources>
