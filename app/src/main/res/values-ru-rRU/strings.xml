@@ -8,11 +8,11 @@
     <string name="password">Пароль</string>
     <string name="name">Имя</string>
     <string name="phone">Телефон</string>
-    <string name="house_number">Номер дома</string>
     <string name="apartment_number">Номер квартиры</string>
     <string name="registration">Регистрация</string>
     <string name="entry">Вход</string>
     <string name="exit">Выход</string>
     <string name="you_entered_incorrect_data">Вы ввели неверные данные</string>
     <string name="open_the_barrier">Открыть шлагбаум</string>
+    <string name="frame_house_number">Номер корпуса дома</string>
 </resources>

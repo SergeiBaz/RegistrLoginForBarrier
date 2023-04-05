@@ -29,7 +29,7 @@
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/login"
-        android:inputType="textEmailAddress"
+        android:inputType="textWebEmailAddress|textEmailAddress"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.544"
@@ -54,6 +54,7 @@
         android:id="@+id/edName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/name"
         android:inputType="textPersonName"
@@ -62,36 +63,35 @@
         app:layout_constraintEnd_toEndOf="@+id/edPassword"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/edPassword"
-        app:layout_constraintTop_toBottomOf="@+id/edPassword"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/edPassword" />
 
     <EditText
         android:id="@+id/edHouseNum"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="@string/house_number"
-        android:inputType="textPassword"
+        android:hint="@string/frame_house_number"
+        android:inputType="numberSigned|numberPassword"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="@+id/edName"
         app:layout_constraintStart_toStartOf="@+id/edName"
-        app:layout_constraintTop_toBottomOf="@+id/edName"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/edName" />
 
     <EditText
         android:id="@+id/edApartNum"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/apartment_number"
-        android:inputType="textPassword"
+        android:inputType="number"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="@+id/edHouseNum"
         app:layout_constraintStart_toStartOf="@+id/edHouseNum"
-        app:layout_constraintTop_toBottomOf="@+id/edHouseNum"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/edHouseNum" />
 
     <Button
         android:id="@+id/bEntry"
@@ -141,4 +141,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/edLogin"
         app:srcCompat="@drawable/entry" />
+
+    <TextView
+        android:id="@+id/textEror"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="#D50000"
+        app:layout_constraintEnd_toEndOf="@+id/bRegistr"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/bRegistr"
+        app:layout_constraintTop_toBottomOf="@+id/bRegistr" />
 </androidx.constraintlayout.widget.ConstraintLayout>

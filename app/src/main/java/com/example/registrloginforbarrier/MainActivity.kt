@@ -2,6 +2,7 @@ package com.example.registrloginforbarrier
 
 import Constance
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -23,14 +24,18 @@ class MainActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        val log = data?.getStringExtra(Constance.LOGIN)
-        val pas = data?.getStringExtra(Constance.PASSWORD)
+
         if (requestCode == Constance.REQUEST_SING_IN){
+
+            val log = data?.getStringExtra(Constance.LOGIN)
+            val pas = data?.getStringExtra(Constance.PASSWORD)
+
             if (login == log && pas == password){
 
+                bindingClass.imageBarrier.setImageResource(R.drawable._81)
                 bindingClass.textGreetings.text = (getString(R.string.welcome) + " $name")
-                bindingClass.imageBarrier.visibility = View.GONE
-                bindingClass.bSingIn.text = getString(R.string.open_the_barrier)
+                bindingClass.bOpen.visibility = View.VISIBLE
+                bindingClass.bSingIn.text = getString(R.string.exit)
                 bindingClass.bSingUp.visibility = View.GONE
 
             }else{
@@ -49,9 +54,10 @@ class MainActivity : AppCompatActivity() {
             apartmentNumber = data.getStringExtra(Constance.APARTMENT_NUMBER)!!
             phone = data.getStringExtra(Constance.PHONE)!!
 
+            bindingClass.imageBarrier.setImageResource(R.drawable._81)
             bindingClass.textGreetings.text = (getString(R.string.welcome) + " $name")
-            bindingClass.imageBarrier.visibility = View.GONE
-            bindingClass.bSingIn.text = getString(R.string.open_the_barrier)
+            bindingClass.bOpen.visibility = View.VISIBLE
+            bindingClass.bSingIn.text = getString(R.string.exit)
             bindingClass.bSingUp.visibility = View.GONE
 
 
@@ -80,6 +86,12 @@ class MainActivity : AppCompatActivity() {
             startActivityForResult(intent, Constance.REQUEST_SING_UP)
         }
 
+    }
+
+    fun onClickCall(view: View){
+        val intent = Intent(Intent.ACTION_DIAL)
+        intent.data = Uri.parse("tel:89159505044")
+        startActivity(intent)
     }
 
 }
